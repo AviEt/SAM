@@ -42,6 +42,18 @@ angular.module('starter.controllers', [])
         }
       }
   });
+
+  $scope.threats = function() {
+    if(!$scope.device || !$scope.device.threats) {
+      return [];
+    }
+
+    return $scope.device.threats;
+  }
+
+  $scope.hasThreats = function () {
+    return $scope.threats().length === 0;
+  }
 })
 
 .controller('AccountCtrl', function($scope) {
