@@ -1,0 +1,1 @@
+angular.module('starter.controllers').constant("BASE_URL", "http://127.0.0.1/deploy");
