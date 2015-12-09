@@ -34,6 +34,8 @@ angular.module('starter.controllers', [])
   $scope.usageCollapsed = true;
   $scope.browsingCollapsed = true;
 
+  mixpanel.track("Device detail view");
+
   Device.query(function(devices) {
   for (i = 0; i < devices.length; i++) {
         if(devices[i].id == $stateParams.deviceId) {
