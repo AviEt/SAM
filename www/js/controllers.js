@@ -52,7 +52,7 @@ angular.module('starter.controllers', [])
   }
 
   $scope.hasThreats = function () {
-    return $scope.threats().length === 0;
+    return $scope.threats().length !== 0;
   }
 })
 
