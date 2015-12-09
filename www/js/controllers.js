@@ -30,6 +30,10 @@ angular.module('starter.controllers', [])
 })
 
 .controller('DeviceDetailCtrl', function($scope, $stateParams, Device) {
+  $scope.securityCollapsed = true;
+  $scope.usageCollapsed = true;
+  $scope.browsingCollapsed = true;
+
   Device.query(function(devices) {
   for (i = 0; i < devices.length; i++) {
         if(devices[i].id == $stateParams.deviceId) {
