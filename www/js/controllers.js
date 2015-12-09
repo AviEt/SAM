@@ -20,10 +20,6 @@ angular.module('starter.controllers', [])
 .controller('DeviceListCtrl', function($scope, Device) {
   $scope.devices = [];
 
-  $scope.deviceToImage = {
-    osx: "mac.png"
-  };
-
   Device.query(function (devices) {
     $scope.devices = devices;
   });
@@ -31,6 +27,17 @@ angular.module('starter.controllers', [])
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
+})
+
+.controller('DeviceDetailCtrl', function($scope, $stateParams, Device) {
+  Device.query(function(devices) {
+  for (i = 0; i < devices.length; i++) {
+        if(devices[i].id == $stateParams.deviceId) {
+          $scope.device = devices[i];
+          break;
+        }
+      }
+  });
 })
 
 .controller('AccountCtrl', function($scope) {

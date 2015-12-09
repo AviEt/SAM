@@ -3,8 +3,8 @@
         <ion-list>
             <ion-item class="item-remove-animate item-avatar item-icon-right"
                       ng-repeat="device in devices"
-                      type="item-text-wrap" href="#/tab/deliveries/{{device.id}}">
-                <img ng-src="img/{{deviceToImage[device.type]}}" class="list-item-image">
+                      type="item-text-wrap" href="#/tab/device/{{device.id}}">
+                <img ng-src="img/{{device.type}}.png" class="list-item-image">
                 <h3>{{device.name}}</h3>
             </ion-item>
         </ion-list>
