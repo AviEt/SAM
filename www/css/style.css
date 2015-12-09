@@ -45,3 +45,7 @@ item-accordion.ng-hide-add,
     float: right
 }
 
+.device-header {
+    margin-top: 10px !important;
+}
+
