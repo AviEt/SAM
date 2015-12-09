@@ -8,7 +8,36 @@
 .item-accordion.ng-hide {
   line-height: 0px;
 }
+
 item-accordion.ng-hide-add,
 .item-accordion.ng-hide-remove {
   display: block !important;
 }
+
+.device-detail-icon {
+  width: 100px;
+  height: 100px
+}
+
+.disable-device {
+  line-height: 20px;
+  float: right;
+}
+
+    /* Styles here */
+.toggle input + .track{
+  background-color: red;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+
+.device-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+

@@ -4,11 +4,51 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="{{device.name}}">
+<ion-view>
     <ion-content class="padding">
-        <img ng-src="img/{{device.type}}.png" style="width: 64px; height: 64px">
-        <p>
+        <img ng-src="img/{{device.type}}.png" class="center device-detail-icon">
+
+        <div class="center device-name ">
             {{device.name}}
-        </p>
+        </div>
+
+        <div class="list card">
+            <div class="item item-divider">
+                <span>Internet Access</span>
+                <label class="disable-device toggle">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="item item-divider" ng-click="show = !show">Recent Updates</div>
+            <div class="item item-body item-accordion" ng-show="show">
+                <div>
+                    There is a fire in <b>sector 3</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="item item-divider" ng-click="show = !show">Recent Updates</div>
+            <div class="item item-body item-accordion" ng-show="show">
+                <div>
+                    There is a fire in <b>sector 3</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="item item-divider" ng-click="show = !show">Recent Updates</div>
+            <div class="item item-body item-accordion" ng-show="show">
+                <div>
+                    There is a fire in <b>sector 3</b>
+                </div>
+            </div>
+        </div>
     </ion-content>
 </ion-view>
