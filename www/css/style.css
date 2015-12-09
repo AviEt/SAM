@@ -41,7 +41,7 @@ item-accordion.ng-hide-add,
   font-weight: bold;
 }
 
-.device-detail-header {
-  font-weight: bold;
+.collapse-arrow {
+    float: right
 }
 

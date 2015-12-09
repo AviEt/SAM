@@ -26,10 +26,10 @@
 
 
         <div class="list card">
-            <div class="item item-divider" ng-click="securityCollapsed = !securityCollapsed"><div
-                    class="ion-locked device-detail-header">&nbsp;&nbsp;&nbsp;
-                Security</div>
-                <div class="device-detail-data-subheader"></div>
+            <div class="item item-divider" ng-click="securityCollapsed = !securityCollapsed"><span
+                    ng-class="{'ion-ios-arrow-right': securityCollapsed, 'ion-ios-arrow-down': !securityCollapsed}"
+                    class="col-40 device-detail-header">&nbsp;&nbsp;&nbsp;
+                Security</span><span class="collapse-arrow col-10 ion-locked"></span>
             </div>
             <div class="item item-body item-accordion" ng-hide="securityCollapsed">
                 <div>
@@ -39,7 +39,11 @@
         </div>
 
         <div class="list card">
-            <div class="item item-divider" ng-click="usageCollapsed = !usageCollapsed">Recent Updates</div>
+            <div class="item item-divider" ng-click="usageCollapsed = !usageCollapsed">
+                <span ng-class="{'ion-ios-arrow-right': usageCollapsed, 'ion-ios-arrow-down': !usageCollapsed}"
+                        class="col-40 device-detail-header">&nbsp;&nbsp;&nbsp;
+                Usage</span><span class="collapse-arrow col-10 ion-stats-bars"></span>
+            </div>
             <div class="item item-body item-accordion" ng-hide="usageCollapsed">
                 <div>
                     There is a fire in <b>sector 3</b>
@@ -48,7 +52,11 @@
         </div>
 
         <div class="list card">
-            <div class="item item-divider" ng-click="browsingCollapsed = !browsingCollapsed">Recent Updates</div>
+            <div class="item item-divider" ng-click="browsingCollapsed = !browsingCollapsed">
+                <span ng-class="{'ion-ios-arrow-right': browsingCollapsed, 'ion-ios-arrow-down': !browsingCollapsed}"
+                        class="col-40 device-detail-header">&nbsp;&nbsp;&nbsp;
+                Browsing Categories</span><span class="collapse-arrow col-10 ion-pie-graph"></span>
+            </div>
             <div class="item item-body item-accordion" ng-hide="browsingCollapsed">
                 <div>
                     There is a fire in <b>sector 3</b>
