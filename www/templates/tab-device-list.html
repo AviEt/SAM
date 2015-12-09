@@ -2,23 +2,10 @@
     <ion-content>
         <ion-list>
             <ion-item class="item-remove-animate item-avatar item-icon-right"
-                      ng-repeat="delivery in deliveries | filter: {type: 'SUGGESTED'}"
-                      type="item-text-wrap" href="#/tab/deliveries/{{delivery.id}}">
-                <img ng-src="img/{{delivery.image}}" class="list-item-image">
-                <h3>{{delivery.itemName}}</h3>
-                <p>
-        <span><strong>
-            {{delivery.startCity}}
-            <span class="ion-android-arrow-forward"></span>
-            {{delivery.destinationCity}}
-        </strong>
-        </span>
-                </p>
-                <p class="delivery-distance"><strong>Distance:&nbsp;
-                    &nbsp;</strong>{{delivery.distance}}&nbsp;&nbsp;&nbsp;&nbsp;<strong>Earn:</strong>&nbsp;
-                    ${{delivery
-                    .value}}</p>
-                <i class="icon ion-chevron-right icon-accessory"></i>
+                      ng-repeat="device in devices"
+                      type="item-text-wrap" href="#/tab/deliveries/{{device.id}}">
+                <img ng-src="img/{{deviceToImage[device.type]}}" class="list-item-image">
+                <h3>{{device.name}}</h3>
             </ion-item>
         </ion-list>
     </ion-content>

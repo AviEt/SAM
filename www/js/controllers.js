@@ -20,6 +20,10 @@ angular.module('starter.controllers', [])
 .controller('DeviceListCtrl', function($scope, Device) {
   $scope.devices = [];
 
+  $scope.deviceToImage = {
+    osx: "mac.png"
+  };
+
   Device.query(function (devices) {
     $scope.devices = devices;
   });
