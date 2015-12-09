@@ -18,6 +18,11 @@ angular.module('starter.controllers', [])
 })
 
 .controller('DeviceListCtrl', function($scope, Device) {
+  $scope.devices = [];
+
+  Device.query(function (devices) {
+    $scope.devices = devices;
+  });
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
