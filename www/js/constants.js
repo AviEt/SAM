@@ -1,1 +1,1 @@
-angular.module('starter.controllers').constant("BASE_URL", "http://localhost:8080/deploy");
+angular.module('starter.controllers').constant("BASE_URL", "http://192.168.1.188:8080/deploy");
