@@ -23,6 +23,15 @@ angular.module('starter.controllers', [])
   Device.query(function (devices) {
     $scope.devices = devices;
   });
+
+  setInterval(function() {
+      Device.query(function (devices) {
+        if(devices.length > $scope.devices.length) {
+            $scope.devices = devices;
+            $scope.$digest();
+          }
+        });
+        }, 1000);
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
