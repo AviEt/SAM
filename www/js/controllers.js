@@ -29,7 +29,7 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('DeviceDetailCtrl', function($scope, $stateParams, Device) {
+.controller('DeviceDetailCtrl', function($scope, $stateParams, $http, BASE_URL, Device) {
   $scope.securityCollapsed = true;
   $scope.usageCollapsed = true;
   $scope.browsingCollapsed = true;
@@ -44,6 +44,11 @@ angular.module('starter.controllers', [])
         }
       }
   });
+
+  $scope.toggleInternetAccess = function() {
+    $scope.device.allowInternetAccess = !$scope.device.allowInternetAccess;
+    $http.get(BASE_URL + "/SAM/accept?deviceId=" + $scope.device.id + "&accept=" + $scope.device.allowInternetAccess);
+  }
 
   $scope.threats = function() {
     if(!$scope.device || !$scope.device.threats) {
